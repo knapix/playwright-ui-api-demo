@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
+import {ApiClient} from "../../utils/apiClient";
 
 test('get users list', async ({ request }) => {
-  const response = await request.get('https://jsonplaceholder.typicode.com/users');
+  const apiClient = new ApiClient(request);
+
+  const response = await apiClient.getUsers()
 
   expect(response.status()).toBe(200);
 
