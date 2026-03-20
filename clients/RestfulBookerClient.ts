@@ -39,6 +39,12 @@ export class RestfulBookerClient {
         });
     }
 
+    async updateBookingWithoutAuth(id: number, payload: unknown) {
+        return this.request.put('https://restful-booker.herokuapp.com/booking', {
+            data: payload
+        });
+    }
+
     async deleteBooking(id: number, token: string) {
         return this.request.delete(`https://restful-booker.herokuapp.com/booking/${id}`, {
             headers: {
