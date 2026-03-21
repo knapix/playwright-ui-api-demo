@@ -18,4 +18,4 @@ test('create post', async ({request}) => {
     expect(body).toHaveProperty('id');
 
     console.log(body);
-})
+});

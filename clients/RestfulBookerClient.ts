@@ -2,7 +2,8 @@ import {APIRequestContext} from "@playwright/test";
 
 
 export class RestfulBookerClient {
-    constructor(private request: APIRequestContext) {}
+    constructor(private request: APIRequestContext) {
+    }
 
     async createToken(username: string, password: string) {
         return this.request.post('https://restful-booker.herokuapp.com/auth', {
@@ -50,7 +51,7 @@ export class RestfulBookerClient {
             headers: {
                 Cookie: `token=${token}`
             }
-            });
+        });
     }
 
 }

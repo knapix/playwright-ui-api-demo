@@ -1,7 +1,8 @@
 import {APIRequestContext} from "@playwright/test";
 
 export class AutomationExerciseClient {
-    constructor(private request: APIRequestContext) {}
+    constructor(private request: APIRequestContext) {
+    }
 
     async getAllProducts() {
         return this.request.get('https://automationexercise.com/api/productsList');

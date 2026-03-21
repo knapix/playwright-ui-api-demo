@@ -10,4 +10,4 @@ test('should search product', async ({request}) => {
     const body = await response.json();
     expect(body).toHaveProperty('products');
     expect(body.products.length).toBeGreaterThan(0);
-})
+});

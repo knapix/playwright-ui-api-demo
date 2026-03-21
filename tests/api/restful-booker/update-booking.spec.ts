@@ -1,8 +1,8 @@
-import { expect, test } from "@playwright/test";
-import { RestfulBookerClient } from "../../../clients/RestfulBookerClient";
-import { bookingData, restfulBookerCredentials } from "../../../utils/restfulBookerData";
+import {expect, test} from "@playwright/test";
+import {RestfulBookerClient} from "../../../clients/RestfulBookerClient";
+import {bookingData, restfulBookerCredentials} from "../../../utils/restfulBookerData";
 
-test('should update booking', async ({ request }) => {
+test('should update booking', async ({request}) => {
     const client = new RestfulBookerClient(request);
 
     const authResponse = await client.createToken(

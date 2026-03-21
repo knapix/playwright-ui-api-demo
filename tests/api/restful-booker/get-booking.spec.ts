@@ -2,7 +2,7 @@ import {expect, test} from "@playwright/test";
 import {RestfulBookerClient} from "../../../clients/RestfulBookerClient";
 import {bookingData} from "../../../utils/restfulBookerData";
 
-test ('should create and fetch booking', async  ({request}) => {
+test('should create and fetch booking', async ({request}) => {
     const client = new RestfulBookerClient(request);
 
     const createResponse = await client.createBooking(bookingData);
@@ -18,6 +18,5 @@ test ('should create and fetch booking', async  ({request}) => {
     expect(booking.firstname).toBe(bookingData.firstname);
     expect(booking.lastname).toBe(bookingData.lastname);
     expect(booking.totalprice).toBe(bookingData.totalprice);
-
 });
 

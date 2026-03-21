@@ -13,4 +13,4 @@ test('should create auth token', async ({request}) => {
     expect(response.status()).toBe(200);
     const body = await response.json();
     expect(body).toHaveProperty('token')
-})
+});

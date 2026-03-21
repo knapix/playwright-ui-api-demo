@@ -2,7 +2,7 @@ import {expect, test} from "@playwright/test";
 import {RestfulBookerClient} from "../../../clients/RestfulBookerClient";
 import {bookingData, restfulBookerCredentials} from "../../../utils/restfulBookerData";
 
-test ('should delete booking', async ({request}) => {
+test('should delete booking', async ({request}) => {
     const client = new RestfulBookerClient(request);
 
     //auth

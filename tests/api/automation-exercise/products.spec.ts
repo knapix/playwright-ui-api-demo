@@ -1,7 +1,7 @@
 import {expect, test} from "@playwright/test";
 import {AutomationExerciseClient} from "../../../clients/AutomationExerciseClient";
 
-test ('should get all products list', async ({request}) => {
+test('should get all products list', async ({request}) => {
     const client = new AutomationExerciseClient(request);
 
     const response = await client.getAllProducts();
